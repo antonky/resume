@@ -3,14 +3,11 @@
 \usepackage{latexsym}
 \usepackage[margin=0.6in]{geometry}
 \usepackage[explicit]{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{tabularx}
 \usepackage{multicol}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{8pt}
@@ -50,7 +47,7 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}
-\item%
+\item
   \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & \textbf{\small #2} \\
     \textit{\small#3} & \textit{\small #4} \\
@@ -76,45 +73,69 @@
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{%
+\newcommand{\resumeSubHeadingListStart}{
 \begin{itemize}[leftmargin=0.0in, label={}]}
-    \newcommand{\resumeSubHeadingListEnd}{%
+    \newcommand{\resumeSubHeadingListEnd}{
   \end{itemize}}
-\newcommand{\resumeItemListStart}{%
+\newcommand{\resumeItemListStart}{
 \begin{itemize}}
-    \newcommand{\resumeItemListEnd}{%
+    \newcommand{\resumeItemListEnd}{
   \end{itemize}\vspace{-5pt}}
 
 \begin{document}
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{{\Large Anton Kaminsky}} & Bellevue, WA\\
-  \href{mailto:antonwizkam@gmail.com}{\underline{antonwizkam@gmail.com}} & \href{https://github.com/antonky}{\underline{github.com/antonky}} \\
+  \href{mailto:antonwizkam@gmail.com}{\underline{antonwizkam@gmail.com}} & (253) 316-6618 \\
 \end{tabular*}
 
 \section{Experience}
-\resumeSubHeadingListStart%
+\resumeSubHeadingListStart
 \resumeSubheading
 {Meta}{Mar. 2022 -- Present}
 {Software Engineer}{Bellevue, WA}
-\resumeItemListStart%
-\resumeItem{Currently working on OnDemand and DevServer, critical internal developer infrastructure tools that power code authoring and build workflows for thousands of engineers}
-\resumeItem{Fixed a critical visibility bug in Marketplace ratings and reviews, making several million previously hidden reviews public and significantly improving buyer confidence}
-\resumeItem{Built and maintained key Instagram web calling and messaging features using React, JavaScript, and GraphQL}
-\resumeItem{Developed real-time messaging capabilities for Instagram web, implementing data synchronization across multiple devices and platforms}
-\resumeItem{Contributed to Messenger Desktop app using React Native for macOS and Windows platforms, supporting millions of daily users}
-\resumeItem{Collaborated across multiple teams to implement cross-platform features and ensure consistent user experience}
-\resumeItem{Participated in code reviews, technical discussions, and knowledge sharing to improve team productivity and code quality}
-\resumeItemListEnd%
-\resumeSubHeadingListEnd%
+\resumeItemListStart
+\resumeItem{Resolved critical Marketplace visibility bug affecting millions of hidden reviews, implementing database query optimizations and frontend rendering fixes that restored buyer confidence and increased engagement metrics}
+\resumeItem{Engineer and maintain developer infrastructure (OnDemand and DevServer) powering code authoring and build workflows for thousands of engineers, improving development velocity and reducing build times}
+\resumeItem{Architected real-time messaging capabilities for Instagram web, implementing WebSocket connections, message queuing, and cross-platform data synchronization using React, TypeScript, and GraphQL}
+\resumeItem{Built core Instagram web calling features including WebRTC integration, call state management, and UI components serving millions of daily active users}
+\resumeItem{Developed Messenger Desktop application features using React Native, implementing platform-specific optimizations for macOS and Windows to ensure native performance}
+\resumeItem{Led cross-functional collaboration with product, design, and backend teams to deliver consistent user experiences across Meta's family of apps}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-16pt}
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Gild}{Jun. 2025 -- Present}
+{Founder \& Technical Lead}{Curated local marketplace}
+\resumeItemListStart
+\resumeItem{Designed and developed iOS application using SwiftUI and Swift, implementing complex dual buyer/seller flows, saved search alerts, and real-time item discovery features}
+\resumeItem{Architected scalable backend infrastructure supporting high-resolution media uploads, Apple Sign-In authentication, push notifications, and user profile management}
+\resumeItem{Integrated OpenAI APIs to power intelligent listing optimization, semantic search refinement, and automated negotiation assistance between buyers and sellers}
+\resumeItem{Implemented trust and safety features including transaction history and reputation scoring to create exclusive marketplace environment}
+\resumeItemListEnd
+
+\resumeSubheading
+{Otto}{Feb. 2025 -- Present}
+{Founder \& Systems Engineer}{Automotive telemetry platform}
+\resumeItemListStart
+\resumeItem{Developed Otto Hub: Raspberry Pi-based data logger with custom Linux kernel modules for high-frequency GPS/IMU data capture and real-time wireless transmission}
+\resumeItem{Engineered Otto Pulse: analog driver feedback device using Raspberry Pi Pico W with custom firmware for sub-millisecond latency performance indicators}
+\resumeItem{Built real-time data pipeline using Rust and embedded WebSockets, processing 1000Hz sensor data streams with automatic failover and data integrity verification}
+\resumeItem{Designed multi-layer PCBs in KiCad integrating 6-axis IMU, GPS modules, CAN transceivers, and Raspberry Pi Pico W for wireless connectivity}
+\resumeItem{Developed cross-platform companion applications for telemetry analysis and performance monitoring}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 \vspace{-16pt}
 
 \section{Education}
-\resumeSubHeadingListStart%
+\resumeSubHeadingListStart
 \resumeSubheading
 {University of Toronto}{Sep. 2017 -- Dec. 2021}
 {Honors, Bachelor of Science in Computer Science}{Toronto, ON}
-\resumeSubHeadingListEnd%
+\resumeSubHeadingListEnd
 
 \begin{multicols}{3}
   \begin{flushleft}
@@ -142,33 +163,5 @@
   \end{flushleft}
 \end{multicols}
 \vspace{-10pt}
-
-\section{Interests}
-\begin{multicols}{3}
-  \begin{flushleft}
-    \small{
-      Cycling \\
-      Photography \\
-      Large Language Models
-    }
-  \end{flushleft}
-
-  \begin{flushleft}
-    \small{
-      Computational Geometry \\
-      AR/VR \\
-      3D Infrastructure
-    }
-  \end{flushleft}
-
-  \begin{flushleft}
-    \small{
-      Electrical Engineering \\
-      Circuit \& PCB Design \\
-      3D Modelling/Manufacturing
-    }
-  \end{flushleft}
-\end{multicols}
-\vspace{-16pt}
 
 \end{document}
