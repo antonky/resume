@@ -29,7 +29,7 @@
 \setlength{\tabcolsep}{0in}
 
 \def\Vhrulefill{\leavevmode\leaders\hrule height 0.8ex depth \dimexpr0.4pt-0.7ex\hfill\kern0pt}
-\titleformat{\section}{\bfseries\large}{}{0pt}{\noindent\Vhrulefill~#1~\Vhrulefill}
+\titleformat{\section}{\large\resumesemibold}{}{0pt}{\noindent\Vhrulefill~#1~\Vhrulefill}
 
 \pdfgentounicode=1
 
@@ -45,11 +45,13 @@
   }
 }
 
+\newcommand{\resumesemibold}[1]{{\fontseries{sb}\selectfont #1}}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}
 \item
   \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textbf{\small #2} \\
+    \resumesemibold{#1} & {\small \resumesemibold{#2}} \\
     \textit{\small#3} & \textit{\small #4} \\
   \end{tabular*}\vspace{-7pt}
 }
@@ -64,7 +66,7 @@
 \newcommand{\resumeProjectHeading}[2]{
 \item
   \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & \textbf{\small #2}\\
+    \small#1 & {\small \resumesemibold{#2}}\\
   \end{tabular*}\vspace{-7pt}
 }
 
@@ -85,7 +87,7 @@
 \begin{document}
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\Large Anton Kaminsky}} & Bellevue, WA\\
+  {\Large \resumesemibold{Anton Kaminsky}} & Bellevue, WA\\
   \href{mailto:antonwizkam@gmail.com}{\underline{antonwizkam@gmail.com}} & (253) 316-6618 \\
 \end{tabular*}
 
@@ -95,12 +97,13 @@
 {Meta}{Mar. 2022 -- Aug. 2025}
 {Software Engineer}{Bellevue, WA}
 \resumeItemListStart
-\resumeItem{Resolved critical Marketplace visibility bug affecting millions of hidden reviews, implementing database query optimizations and frontend rendering fixes that restored buyer confidence and increased engagement metrics}
-\resumeItem{Engineer and maintain developer infrastructure (OnDemand and DevServer) powering code authoring and build workflows for thousands of engineers, improving development velocity and reducing build times}
-\resumeItem{Architected real-time messaging capabilities for Instagram web, implementing WebSocket connections, message queuing, and cross-platform data synchronization using React, TypeScript, and GraphQL}
-\resumeItem{Built core Instagram web calling features including WebRTC integration, call state management, and UI components serving millions of daily active users}
-\resumeItem{Developed Messenger Desktop application features using React Native, implementing platform-specific optimizations for macOS and Windows to ensure native performance}
-\resumeItem{Led cross-functional collaboration with product, design, and backend teams to deliver consistent user experiences across Meta's family of apps}
+\resumeItem{Added permissions layer and employee tier security policies to OnDemand environments, unlocking access for contracted workers previously blocked by corporate restrictions}
+\resumeItem{Fixed longstanding Marketplace defect that left over 10 million seller reviews hidden from buyers, including some buried for four years, after uncovering the issue through independent data analysis and retroactively publishing the reviews}
+\resumeItem{Built Marketplace messaging automation tool with a React UI that provisions buyers and sellers, lists items for sale, and drives conversations in one click, replacing an error prone multi session manual flow used by Marketplace teams}
+\resumeItem{Implemented Marketplace review hub in the Facebook app that consolidated review actions in one interface, driving higher review authoring volume}
+\resumeItem{Analyzed Marketplace performance bottlenecks for surfaces such as seller profiles, optimizing and caching long running queries to reduce load times from up to 10 seconds to roughly 2}
+\resumeItem{Implemented end to end encrypted Instagram web voice and video calling by integrating a WhatsApp media library to meet EU compliance deadlines shared across Meta messaging teams}
+\resumeItem{Built Messenger Desktop group call presence indicator in React Native so participants could see who was active, delivering a statistically significant increase in video calls and hitting a team milestone}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -113,14 +116,6 @@
 \resumeItem{Eliminated a source of 5\% of total regression bugs by proposing and developing a testing tool using Node.js that visually highlights PDF rendering anomalies in printed tax forms to assist with further manual review}
 \resumeItemListEnd
 
-\resumeSubheading
-{Veeva Systems Inc.}{Sep. 2019 -- Dec. 2019}
-{Full Stack Engineer Intern}{Toronto, ON}
-\resumeItemListStart
-\resumeItem{Increased the number of documented user activity tracking points by 200\% by conducting a static analysis of the codebase and extracting business actions from context in the code}
-\resumeItem{Added a new API endpoint for use with 10+ automation tests}
-\resumeItem{Fixed 20+ defects in different areas of the codebase, both frontend and backend}
-\resumeItemListEnd
 \resumeSubHeadingListEnd
 \vspace{-16pt}
 
